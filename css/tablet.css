@@ -1,0 +1,148 @@
+body{
+    height: 100vh;
+}
+
+section{
+    width: 25rem;
+}
+
+.app{
+    background-color: var(--white);
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 9px 10px 2px rgba(0,0,0,0.26);
+    position: relative;
+}
+
+.app .containar-app{
+    flex-direction: row;
+}
+
+.app .sideBar-app{
+    width: 18rem;
+    height: 50rem;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.app .sideBar-app .svgMobile-app{
+    display: none;
+}
+
+.app .sideBar-app .svgDesktop-app{
+    display: block;
+}
+
+.app .sideBar-app .sideBar_step-app{
+    margin-top: 0;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 3rem 2rem;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections .step-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 1rem;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections .step-info .subStep{
+    color: var(--light-gray);
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections .step-info .subParagraph{
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.app .info{
+    width: 25rem;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.app .info .info-container{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .plan{
+    width: 25rem;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.app .plan .plan-container{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .addOns{
+    width: 25rem;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.app .addOns .addOns-container{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label span{
+    position: relative;
+    right: 0;
+    margin: 0;
+}
+
+.app .summary{
+    width: 25rem;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.app .summary .summary-container{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .finish{
+    width: 25rem;
+    background-color: transparent;
+    margin: 0;
+    border-radius: 0;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.app .finish .container_finish{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .container-submitOrBack{
+    height: 8rem;
+    background-color: transparent;
+    padding-left: 19.5rem;
+    justify-content: flex-start;
+}
+
+.app .container-submitOrBack #back{
+    margin-left: 3rem;
+    margin-right: 7rem;
+}

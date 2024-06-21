@@ -1,0 +1,77 @@
+section{
+    width: 45rem;
+}
+
+.app .sideBar-app{
+    width: 25rem;
+    height: 50rem;
+}
+
+.app .info{
+    width: 45rem;
+}
+
+.app .info .info-container{
+    margin: 0 5rem;
+}
+
+.app .plan{
+    width: 45rem;
+}
+
+.app .plan .plan-container .form-plan .form-plan_container{
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.app .plan .form-plan .container-planSelected{
+    width: 12.5rem;
+    height: 17rem;
+    gap: 5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.app .addOns{
+    width: 45rem;
+}
+
+.app .addOns .addOns-container{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label span{
+    margin-right: 1.5rem;
+    position: absolute;
+    right: 0;
+}
+
+.app .summary{
+    width: 45rem;
+}
+
+.app .summary .summary-container{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .finish{
+    width: 45rem;
+}
+
+.app .finish .container_finish{
+    margin: 0 2rem;
+    padding: 3rem 0 0;
+}
+
+.app .container-submitOrBack{
+    height: 10rem;
+    padding-left: 26.5rem;
+}
+
+.app .container-submitOrBack #back{
+    margin-left: 8rem;
+    margin-right: 18rem;
+}

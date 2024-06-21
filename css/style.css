@@ -1,0 +1,521 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: var(--magnolia);
+    display: grid;
+    place-content: center;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.active{
+    display: block;
+}
+
+.inactive{
+    display: none;
+}
+
+.app .containar-app{
+    display: flex;
+    flex-direction: column;
+}
+
+.app .sideBar-app{
+    position: relative;
+}
+
+.app .sideBar-app .svgMobile-app, .app .sideBar-app .svgMobile-app svg{
+    width: 100%;
+}
+            
+.app .sideBar-app .svgDesktop-app{
+    display: none;
+}
+
+.app .sideBar-app .sideBar_step-app{
+    width: 100%;
+    margin-top: 3rem;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections{
+    display: flex;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections .step{
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--white);
+    display: grid;
+    place-content: center;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections .activeStep{
+    background-color: var(--light-blue);
+    color: var(--marine-blue);
+    border: none;
+}
+
+.app .sideBar-app .sideBar_step-app .step-sections .step-info{
+    display: none;
+}
+
+.app .info{
+    width: 90%;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: -8rem;
+    position: relative;
+    z-index: 990;
+    box-shadow: 0px 9px 10px 2px rgba(0,0,0,0.26);
+}
+
+.app .info .info-container{
+    padding: 3rem 2rem 2rem;
+}
+
+.app .info .info-container h1{
+    font-size: 2.488rem;
+    color: var(--marine-blue);
+}
+
+.app .info .info-container p{
+    font-size: 1.4rem;
+    color: var(--cool-gray);
+    margin-top: 10px;
+}
+
+.app .info .info-container .form-info{
+    padding: 2rem 0 0;
+}
+
+.app .info .info-container .form-info .form-info_container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.app .info .info-container .form-info .form-info_container label{
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--marine-blue);
+}
+
+.app .info .info-container .form-info .form-info_container input{
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--marine-blue);
+    font-weight: 600;
+    border: 1px solid var(--light-gray);
+    outline: none;
+}
+
+.app .info .info-container .form-info .form-info_container input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.app .info .info-container .form-info .form-info_container .error{
+    position: absolute;
+    right: 0;
+    font-weight: 600;
+    color: var(--strawberry-red);
+}
+
+.app .plan{
+    width: 90%;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: -9rem;
+    position: relative;
+    z-index: 990;
+    box-shadow: 0px 9px 10px 2px rgba(0,0,0,0.26);
+}
+
+.app .plan .plan-container{
+    padding: 3rem 2rem 2rem;
+}
+
+.app .plan .plan-container h1{
+    font-size: 2.488rem;
+    color: var(--marine-blue);
+}
+
+.app .plan .plan-container .subTitle{
+    font-size: 1.4rem;
+    color: var(--cool-gray);
+    margin-top: 10px;
+}
+
+.app .plan .plan-container .form-plan{
+    padding: 2rem 0 0;
+}
+
+.app .plan .plan-container .form-plan .form-plan_container{
+    display: flex;
+    row-gap: 1rem;
+    flex-direction: column;
+}
+
+.app .plan .form-plan .container-planSelected{
+    width: 100%;
+    height: 7.7rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.app .plan .form-plan .radio-input{
+    display: none;
+}
+
+.app .plan .form-plan .radio-input:checked + .container-planSelected{
+    border-color: var(--purplish-blue);
+    background-color: var(--alabaster);
+}
+
+.app .plan .form-plan .paragraph{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--marine-blue);
+}
+
+.app .plan .form-plan .plan_price{
+    font-size: 1.3rem;
+    color: var(--cool-gray);
+    margin: 5px 0;
+}
+
+.app .plan .form-plan .free{
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--marine-blue);
+    margin: 5px 0;
+}
+
+.app .plan .form-plan .toggle{
+    background-color: var(--alabaster);
+    margin: 2rem 0;
+    padding: 1.5rem 0;
+    border-radius: 10px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.app .plan .form-plan .toggle .plan_toggle{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--cool-gray);
+    cursor: pointer;
+}
+
+.app .plan .form-plan .toggle .active{
+    color: var(--marine-blue);
+}
+
+.app .plan .form-plan .toggle .toggleChoice{
+    width: 4rem;
+    height: 2rem;
+    padding: 3px 0;
+    background-color: var(--marine-blue);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.app .plan .form-plan .toggle .toggleChoice span{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: var(--white);
+    border-radius: 20px;
+    margin: 0 4px;
+    position: absolute;
+    left: 0;
+}
+
+.app .addOns{
+    width: 90%;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: -8rem;
+    position: relative;
+    z-index: 990;
+    box-shadow: 0px 9px 10px 2px rgba(0,0,0,0.26);
+}
+
+.app .addOns .addOns-container{
+    padding: 3rem 2rem 2rem;
+}
+
+.app .addOns .addOns-container h1{
+    font-size: 2.488rem;
+    color: var(--marine-blue);
+}
+
+.app .addOns .addOns-container .subTitle{
+    font-size: 1.4rem;
+    color: var(--cool-gray);
+    margin-top: 10px;
+}
+
+.app .addOns .addOns-container .form-addOns{
+    padding: 2rem 0 0;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label{
+    padding: 2rem 1.5rem;
+    border: 1px solid var(--purplish-blue);
+    border-radius: 5px;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label input{
+    width: 1.6rem;
+    height: 1.6rem;
+    cursor: pointer;
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label div .content-title{
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--marine-blue);
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label div .content-subtitle{
+    margin-top: 5px;
+    font-size: 1.3rem;
+    color: var(--cool-gray);
+}
+
+.app .addOns .addOns-container .form-addOns .form-addOns_container label span{
+    font-size: 1.3rem;
+    color: var(--purplish-blue);
+    margin-right: 1.5rem;
+    position: absolute;
+    right: 0;
+}
+
+.app .summary{
+    width: 90%;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: -8rem;
+    position: relative;
+    z-index: 990;
+    box-shadow: 0px 9px 10px 2px rgba(0,0,0,0.26);
+}
+
+.app .summary .summary-container{
+    padding: 3rem 2rem 2rem;
+}
+
+.app .summary .summary-container h1{
+    font-size: 2.488rem;
+    color: var(--marine-blue);
+}
+
+.app .summary .summary-container .subTitle{
+    font-size: 1.4rem;
+    color: var(--cool-gray);
+    margin-top: 10px;
+}
+
+.app .summary #dynamically{
+    background-color: var(--alabaster);
+    padding: 2rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.app .summary #dynamically .container_chosenPlan{
+    border-bottom: 1px solid var(--light-gray);
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app .summary #dynamically .container_chosenPlan #chosenPlan{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--marine-blue);
+    margin-bottom: 5px;
+}
+
+.app .summary #dynamically .container_chosenPlan a{
+    font-size: 1.1rem;
+    color: var(--cool-gray);
+}
+
+.app .summary #dynamically .container_chosenPlan #planCost{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--marine-blue);
+}
+
+.app .summary #dynamically .container_planAddOns{
+    margin-top: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.app .summary #dynamically .container_planAddOns div{
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app .summary #dynamically .container_planAddOns div p{
+    font-size: 1.1rem;
+    color: var(--cool-gray);
+}
+
+.app .summary #dynamically .container_planAddOns div .planAddOns{
+    font-size: 1.1rem;
+    color: var(--marine-blue);
+}
+
+.app .summary .container_total{
+    margin: 2rem 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.app .summary .container_total #total{
+    font-size: 1.1rem;
+    color: var(--cool-gray);
+}
+
+.app .summary .container_total #sumaTotal{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--purplish-blue);
+}
+
+.app .finish{
+    width: 90%;
+    background-color: var(--white);
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-top: -8rem;
+    position: relative;
+    z-index: 990;
+    box-shadow: 0px 9px 10px 2px rgba(0,0,0,0.26);
+}
+
+.app .finish .container_finish{
+    height: 35rem;
+    padding: 3rem 2rem 2rem;
+    display: grid;
+    place-content: center;
+    gap: 1.3rem;
+    text-align: center;
+}
+
+.app .finish .container_finish h1{
+    font-size: 2.488rem;
+    color: var(--marine-blue);
+}
+
+.app .finish .container_finish p{
+    font-size: 1.4rem;
+    color: var(--cool-gray);
+    margin-top: 10px;
+}
+
+.app .container-submitOrBack{
+    width: 100%;
+    height: 7rem;
+    background-color: var(--alabaster);
+    padding: 0 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 990;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.app .container-submitOrBack #back{
+    background-color: transparent;
+    color: var(--cool-gray);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    opacity: 0;
+}
+
+.app .container-submitOrBack #submit{
+    width: 9.2rem;
+    height: 3.5rem;
+    background-color: var(--marine-blue);
+    padding: 0 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
